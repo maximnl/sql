@@ -2,6 +2,19 @@
 How do I select all the columns in a table that only contain NULL values for all the rows and do some actions? 
 This is practical when we have many columns and like to get rid of empty ones. 
 any action is possible here, just replace the commented lines (that drop empty collumns) with your action. it is about the principle. 
+
+The script uses INFORMATION_SCHEMA.COLUMNS, adds variables for the table schema and table name. The column data type was added to the output. Including the column data type helps when looking for a column of a particular data type. I didn't added the column widths or anything.
+For output the RAISERROR ... WITH NOWAIT is used so text will display immediately instead of all at once (for the most part) at the end like PRINT does.
+
+Output
+
+HTML
+30_attrib1 (datetime) 
+256_Info mbt aflevermoment/status transport (smallint) 
+235_Taalbarrierre / communicatie monteur (smallint) 
+218_Monteur/Wegenwacht ter plaatse (smallint) 
+1593_MES medewerker 1e contact (smallint)
+
 */
 
 SET NOCOUNT ON;
