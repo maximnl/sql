@@ -1,4 +1,8 @@
-
+/*
+How do I select all the columns in a table that only contain NULL values for all the rows and do some actions? 
+This is practical when we have many columns and like to get rid of empty ones. 
+any action is possible here, just replace the commented lines (that drop empty collumns) with your action. it is about the principle. 
+*/
 
 SET NOCOUNT ON;
 
